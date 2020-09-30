@@ -5,4 +5,4 @@ Personal University OOD Module Repository.
 
 Published on the public domain for the benefit of peers on this module. Feel free to look around, but don't plagerise.
 
-I also suggest you look at my Java refference sheet, i appriciate that it can be a dull read - but it's a summarized dump of all the language features i understand, and you need to know to take full advantage of the language.
+I also suggest you look at my [Java refference sheet](https://github.com/Shinkson47/Language-Reference-Sheets/blob/master/Java.java), i appriciate that it can be a dull read - but it's a summarized dump of all the language features i understand, and you need to know to take full advantage of the language.
