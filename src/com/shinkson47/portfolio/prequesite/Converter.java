@@ -1,4 +1,4 @@
-package Prequesite;
+package com.shinkson47.portfolio.prequesite;
 
 /**
  * Provided introductory test / example, modified to be functional.
