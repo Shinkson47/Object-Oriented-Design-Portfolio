@@ -10,6 +10,13 @@ import java.util.Arrays;
 public class Initials {
 
     /**
+     * E-mail domain string
+     *
+     * Used when constructing e-mails.
+     */
+    public static final String DEFAULT_EMAIL_DOMAIN = "email.dmu.ac.uk";
+
+    /**
      * Executable test.
      *
      * Prints initials of multiple names.
@@ -51,23 +58,24 @@ public class Initials {
         return Initials;
     }
 
-    public static final String DMU_EMAIL_DOMAIN = "email.dmu.ac.uk";
-
     /**
      * Generates an email using the default domain, and the prefix provided in the format
      * prefix@defaultdomain
      * @return generated e-mail
      */
     public static String generateEmail(String prefix){
-        return generateEmail(prefix, DMU_EMAIL_DOMAIN);
+        return generateEmail(prefix, DEFAULT_EMAIL_DOMAIN);
     }
 
     /**
      * Generates an email using the default domain, and the prefix provided in the format
-     * prefix@defaultdomain
-     * @param prefix
-     * @param domain
-     * @return
+     * <i>prefix@domain</i>
+     *
+     * Appends provided <i>prefix</i> and <i>domain</i>, separated by an '<i>@</i>'
+     *
+     * @param prefix user name section of the e-mail. <i>prefix@domain</i>
+     * @param domain domain section of the e-mail <i>prefix@domain</i>
+     * @return Generated e-mail.
      */
     public static String generateEmail(String prefix, String domain){
         return prefix + '@' + domain;
