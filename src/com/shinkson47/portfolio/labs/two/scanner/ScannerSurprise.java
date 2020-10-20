@@ -14,8 +14,6 @@ public class ScannerSurprise {
 		System.out.println("Enter a number");
 		int number = sc.nextInt();	//read a number, or crash.
 		System.out.println("You entered the number " + number);
-
-
 		
 		/* Progress to next line - this is needed otherwise the following
 		 * call to the nextLine() method below will seemingly do nothing.
@@ -26,8 +24,7 @@ public class ScannerSurprise {
 		 * is called it "advances the scanner past the current line and
 		 * returns the input that was skipped".
 		 */
-		sc.nextLine(); 
-		
+		sc.nextLine();
 		
 		System.out.println("Type a sentence");
 		String sentence = sc.nextLine();	//read a whole line
