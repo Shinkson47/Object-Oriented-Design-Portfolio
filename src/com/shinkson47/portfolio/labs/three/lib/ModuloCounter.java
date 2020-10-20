@@ -1,15 +1,19 @@
 package com.shinkson47.portfolio.labs.three.lib;
 
+import com.sun.istack.internal.NotNull;
+
 /**
  * A counter with a max value.
  * When incrementing, value can never equal or surpass {@code this.max}, nor can it fall below zero.
  * @author <a href="https://www.shinkson47.in">Jordan T. Gray on 20/10/2020</a>
+ * @version 1.1
  */
 public final class ModuloCounter extends Counter {
 
     //#region properties
     public static final int DEFAULT_MAX = 100;
     private int max;
+    private Counter cycles = new Counter();
     //#endregion
 
 
@@ -73,6 +77,12 @@ public final class ModuloCounter extends Counter {
         return eval;
     }
 
+    @Override
+    public void reset(){
+        cycles.increment();
+        super.reset();
+    }
+
     /**
      * Determines if a value is within 0-<b>max</b>
      * @param i value to evaluate
@@ -82,12 +92,38 @@ public final class ModuloCounter extends Counter {
         return i >= 0 && i < max - 1;
     }
 
+    public int calcIncrements(){
+        return (max*cycles.getCount()) + getCount();
+    }
+
     public static void main(String[] args) {
         ModuloCounter counter = new ModuloCounter(0,5);
 
         do {
-            System.out.println(counter.getCount());
+            System.out.println(counter.toString());
             counter.increment();
         } while (true);
+    }
+
+
+    /** Returns a textual representation of the counter.
+     *
+     * @return a textual representation of the counter.
+     */
+    @Override
+    public String toString() {
+        return "ModuleCounter:[count=" + getCount()
+                + ", max=" + max
+                + ", resets=" + cycles.getCount()
+                + ", increments=" + calcIncrements()
+                +"]";
+    }
+
+    @Override
+    public boolean equals(@NotNull Object o) {
+        if (o == null || getClass() != o.getClass()) return false; // If null, don't continue.
+        if (this == o) return true;                                // Same instance.
+        ModuloCounter counter = (ModuloCounter) o;                 // Throws ClassCastException if not a ModuleCounter
+        return super.getCount() == counter.getCount() && max == counter.max && counter.cycles.getCount() == cycles.getCount();
     }
 }
