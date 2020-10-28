@@ -106,8 +106,8 @@ public final class ModuloCounter extends Counter {
     }
 
 
-    /** Returns a textual representation of the counter.
-     *
+    /**
+     * Returns a textual representation of the counter.
      * @return a textual representation of the counter.
      */
     @Override
