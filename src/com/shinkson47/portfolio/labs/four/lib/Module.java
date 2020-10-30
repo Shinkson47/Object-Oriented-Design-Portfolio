@@ -13,8 +13,12 @@ package com.shinkson47.portfolio.labs.four.lib;
  */
 public class Module {
     //#region constants
-    public static final int ASSERTED_TOTAL = 100;
+    /**
+     * The maximum that {@link this#examWeight} & {@link this#cwkWeight} may sum to.
+     */
+    public static final int ASSERTED_TOTAL_WEIGHT = 100;
     //#endregion
+
     //#region fields
     private String code;
     private String name;
@@ -23,19 +27,42 @@ public class Module {
     //#endregion
 
     //#region constructor
+
+    /**
+     * Creates a new module with no code, name, or weighting.
+     *
+     * @deprecated - modules should be initialised with data.
+     */
+    @Deprecated
     public Module() {
         this("CTEC0000","");
     }
 
+    /**
+     * Creates a module with the specified <b>code</b> & <b>name</b>.
+     * <br>
+     * <p>
+     *    Weighting is defaulted to 50 : ASSERTED_TOTAL_WIGHT - 50.
+     * </p>
+     * @param code The module code <i>i.e. CTEC1905</i>
+     * @param name Name of the module <i>i.e. Computer Law and Cyber Security</i>.
+     */
     public Module(String code, String name) {
         this(code, name, 50);
     }
 
-    public Module(String code, String name, int examWeight) {
-        this(code, name, examWeight,0);
-    }
+    /**
+     * Creates a module with the specified <b>code</b>, <b>name</b> & <b>weight</b>.
+     * <br>
+     * <p>
+     *    Weighting is configured to <i>examWeight</i> : ASSERTED_TOTAL_WIGHT - <i>examWeight</i>.
+     * </p>
+     * @param code The module code <i>i.e. CTEC1905</i>
+     * @param name Name of the module <i>i.e. Computer Law and Cyber Security</i>.
+     * @param examWeight Examination weight of the module. Also infers the cwk weight.
+     */
 
-    public Module(String code, String name, int examWeight, int cwkWeight) {
+    public Module(String code, String name, int examWeight) {
         this.code = code;
         this.name = name;
         this.examWeight = examWeight;
@@ -48,7 +75,7 @@ public class Module {
         return code;
     }
 
-    public void setCode(String code) {
+    private void setCode(String code) {
         this.code = code;
     }
 
@@ -56,20 +83,20 @@ public class Module {
         return name;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         this.name = name;
     }
 
-    protected void setExamWeight() {
+    private void setExamWeight() {
         this.examWeight = assertFromTotal(cwkWeight);
     }
 
-    public void setExamWeight(int examWeight) {
+    private void setExamWeight(int examWeight) {
         this.examWeight = examWeight;
         setCwkWeight();
     }
 
-    protected void setCwkWeight() {
+    private void setCwkWeight() {
         this.cwkWeight = assertFromTotal(examWeight);
     }
 
@@ -88,12 +115,16 @@ public class Module {
         return examWeight;
     }
 
-    protected int assertFromTotal(int val){
-        return ASSERTED_TOTAL - val;
+    private int assertFromTotal(int val){
+        return ASSERTED_TOTAL_WEIGHT - val;
     }
     //#endregion get/set
 
 
+    /**
+     * {@inheritDoc}
+     * @return a string representation of the module.
+     */
     @Override
     public String toString() {
         return "Module:[" +
