@@ -58,7 +58,8 @@ public class ModuleTest {
 	@Test
 	public void testSetAndGetCode() {
 		Module m = new Module();
-		m.setCode("CTEC2602");
+		m.setCode("" +
+				"CTEC2602");
 
 		assertEquals("Code field should be set to and return CTEC2602", "CTEC2602", m.getCode());
 	}

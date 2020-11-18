@@ -75,7 +75,7 @@ public class Module {
         return code;
     }
 
-    private void setCode(String code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
@@ -83,7 +83,7 @@ public class Module {
         return name;
     }
 
-    private void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -91,7 +91,7 @@ public class Module {
         this.examWeight = assertFromTotal(cwkWeight);
     }
 
-    private void setExamWeight(int examWeight) {
+    public void setExamWeight(int examWeight) {
         this.examWeight = examWeight;
         setCwkWeight();
     }
