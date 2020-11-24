@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.composition.main;
+package com.shinkson47.portfolio.labs.seven.PortfolioPlayer.src.lib;
 
 import com.shinkson47.portfolio.labs.six.startingplayer.Name;
 import com.shinkson47.portfolio.labs.six.startingplayer.PairOfDice;

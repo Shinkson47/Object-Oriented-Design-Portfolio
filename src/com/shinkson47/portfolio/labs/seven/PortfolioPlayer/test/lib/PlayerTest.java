@@ -9,6 +9,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 
+import com.shinkson47.portfolio.labs.six.composition.lib.employee.Name;
+import com.shinkson47.portfolio.labs.six.composition.main.Player;
 import org.junit.Test;
 
 public class PlayerTest {
@@ -27,7 +29,7 @@ public class PlayerTest {
 	@Test
 	public void testCustomConstructor2arg() {
 		Name n = new Name("Joe", "Bloggs");
-		String gt = new String("Invincible27");
+		String gt = "Invincible27";
 		Player p = new Player(n, gt);
 
 		assertSame("Player's name field should be initialised with and return the same object received by the constructor", n, p.getName()); 

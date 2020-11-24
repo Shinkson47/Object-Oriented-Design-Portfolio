@@ -6,7 +6,7 @@ package com.shinkson47.portfolio.labs.seven.Interfaces.lib.measurable;
  * 
  * @author Luke
  */
-public class Name {
+public class Name implements Measurable {
 
 	//Fields
 	private String firstName;
@@ -67,5 +67,9 @@ public class Name {
 		return this.familyName.equals(other.familyName)
 			&& this.firstName.equals(other.firstName);
 	}
-	
+
+	@Override
+	public int getMeasure() {
+		return -1;
+	}
 }
