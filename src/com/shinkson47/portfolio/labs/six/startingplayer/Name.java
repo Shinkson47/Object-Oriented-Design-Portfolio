@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.startingplayer.lib;
+package com.shinkson47.portfolio.labs.six.startingplayer;
 
 /**
  * A name has a first name and a family name.

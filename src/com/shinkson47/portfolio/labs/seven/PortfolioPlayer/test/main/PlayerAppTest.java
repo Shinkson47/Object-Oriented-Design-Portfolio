@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import com.shinkson47.portfolio.labs.seven.Interfaces.lib.polymorphism.Die;
 import com.shinkson47.portfolio.labs.seven.Interfaces.lib.polymorphism.PairOfDice;
 import com.shinkson47.portfolio.labs.seven.PortfolioPlayer.src.main.PlayerApp;
-import com.shinkson47.portfolio.labs.six.Aggregation.lib.employeeRegister.Name;
-import com.shinkson47.portfolio.labs.six.StartingPlayer.src.lib.Player;
 import org.junit.Test;
 
 

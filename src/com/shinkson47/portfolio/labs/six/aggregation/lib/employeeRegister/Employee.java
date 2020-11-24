@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.Aggregation.lib.employeeRegister;
+package com.shinkson47.portfolio.labs.six.aggregation.lib.employeeRegister;
 
 /**
  * An Employee has a name, date of employment, and salary.

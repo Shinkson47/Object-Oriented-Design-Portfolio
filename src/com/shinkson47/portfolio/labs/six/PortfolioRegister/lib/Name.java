@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.PortfolioRegister.src.lib;
+package com.shinkson47.portfolio.labs.six.PortfolioRegister.lib;
 
 /**
  * A name has a first name and a family name.

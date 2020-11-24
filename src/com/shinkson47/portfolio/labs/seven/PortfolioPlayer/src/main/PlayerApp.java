@@ -1,6 +1,6 @@
 package com.shinkson47.portfolio.labs.seven.PortfolioPlayer.src.main;
 
-import com.shinkson47.portfolio.labs.six.StartingPlayer.src.lib.Player;
+import com.shinkson47.portfolio.labs.six.composition.main.Player;
 
 import java.util.ArrayList;
 

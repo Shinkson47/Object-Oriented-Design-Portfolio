@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.startingplayer.lib;
+package com.shinkson47.portfolio.labs.six.startingplayer;
 
 import java.util.Random; //importing the Random class
 
