@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.aggregation.lib.playlist;
+package com.shinkson47.portfolio.labs.six.Aggregation.lib.playlist;
 
 /** Song details are the song title, the song's duration, and the artist.
  * There is no specific functionality apart from simulating playing the song,

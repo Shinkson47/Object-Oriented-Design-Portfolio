@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.aggregation.lib.employeeRegister;
+package com.shinkson47.portfolio.labs.six.Aggregation.lib.employeeRegister;
 
 /**
  * A name has a first name and a family name.

@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.aggregation.lib.playlist;
+package com.shinkson47.portfolio.labs.six.Aggregation.lib.playlist;
 
 /*
  * Example of an aggregation.

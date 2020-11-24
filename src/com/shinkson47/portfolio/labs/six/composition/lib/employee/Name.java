@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.composition.lib.employee;
+package com.shinkson47.portfolio.labs.six.Composition.lib.employee;
 
 /**
  * A name has a first name and a family name.

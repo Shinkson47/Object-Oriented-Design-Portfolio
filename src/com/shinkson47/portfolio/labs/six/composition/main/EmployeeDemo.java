@@ -1,9 +1,9 @@
-package com.shinkson47.portfolio.labs.six.composition.main;
+package com.shinkson47.portfolio.labs.six.Composition.main;
 
-import com.shinkson47.portfolio.labs.six.composition.lib.employee.Date;
-import com.shinkson47.portfolio.labs.six.composition.lib.employee.Employee;
-import com.shinkson47.portfolio.labs.six.composition.lib.employee.Name;
 
+import com.shinkson47.portfolio.labs.six.Aggregation.lib.employeeRegister.Date;
+import com.shinkson47.portfolio.labs.six.Aggregation.lib.employeeRegister.Employee;
+import com.shinkson47.portfolio.labs.six.Aggregation.lib.employeeRegister.Name;
 
 public class EmployeeDemo {
     

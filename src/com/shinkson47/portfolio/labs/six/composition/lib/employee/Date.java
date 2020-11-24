@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.composition.lib.employee;
+package com.shinkson47.portfolio.labs.six.Composition.lib.employee;
 
 import java.text.DecimalFormat; //imports DecimalFormat class
 
@@ -56,8 +56,7 @@ public class Date {
         return year;
     }
 
-    /**
-     * Returns a formatted date string.
+    /** Returns a formatted date string.
      * @return A date in the format dd/mm/yyyy
      */
     public String getDateString() {

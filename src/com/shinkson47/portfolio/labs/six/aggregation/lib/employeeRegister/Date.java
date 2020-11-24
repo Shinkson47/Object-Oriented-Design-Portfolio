@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.aggregation.lib.employeeRegister;
+package com.shinkson47.portfolio.labs.six.Aggregation.lib.employeeRegister;
 
 import java.text.DecimalFormat; //imports DecimalFormat class
 

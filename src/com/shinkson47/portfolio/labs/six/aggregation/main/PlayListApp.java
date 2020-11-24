@@ -1,9 +1,4 @@
-package com.shinkson47.portfolio.labs.six.aggregation.main;
-
-
-import com.shinkson47.portfolio.labs.six.aggregation.lib.playlist.PlayList;
-import com.shinkson47.portfolio.labs.six.aggregation.lib.playlist.Song;
-
+package com.shinkson47.portfolio.labs.six.Aggregation.main;
 /* Program to informally test, create and populate a PlayList object. */
 public class PlayListApp {
 

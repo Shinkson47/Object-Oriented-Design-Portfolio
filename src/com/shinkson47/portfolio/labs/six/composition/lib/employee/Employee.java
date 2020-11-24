@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.composition.lib.employee;
+package com.shinkson47.portfolio.labs.six.Composition.lib.employee;
 
 /**
  * An Employee has a name, date of employment, and salary.
@@ -26,7 +26,7 @@ public class Employee {
     /** Creates a new instance of Employee, with the given values. 
      * 
      * @param name the name of the employee
-     * @param startDate the date employment starts/started
+     * @param date the date employment starts/started
      * @param salary the annual salary 
      * */
     public Employee(Name name, Date startDate, double salary) {
