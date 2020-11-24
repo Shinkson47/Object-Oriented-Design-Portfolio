@@ -1,8 +1,8 @@
 package com.shinkson47.portfolio.labs.four.test;
 
 import static org.junit.Assert.*;
+import com.shinkson47.dmulib.*;
 
-import com.shinkson47.portfolio.labs.four.lib.OrderLine;
 import org.junit.Test;
 
 public class OrderLineTest {

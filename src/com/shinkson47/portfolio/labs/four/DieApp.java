@@ -1,7 +1,6 @@
 package com.shinkson47.portfolio.labs.four;
+import com.shinkson47.dmulib.*;
 
-import com.shinkson47.portfolio.labs.four.lib.Die;
-import com.shinkson47.portfolio.labs.four.lib.Rollable;
 
 public class DieApp {
 

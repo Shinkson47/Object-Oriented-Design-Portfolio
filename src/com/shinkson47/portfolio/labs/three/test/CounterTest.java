@@ -1,8 +1,7 @@
 package com.shinkson47.portfolio.labs.three.test; //the package of this Test Case mirrors the package structure of the Counter class under test
 
 import static org.junit.Assert.*;
-
-import com.shinkson47.portfolio.labs.three.lib.Counter;
+import com.shinkson47.dmulib.*;
 import org.junit.Test;
 
 /**

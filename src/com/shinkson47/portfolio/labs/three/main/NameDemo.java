@@ -1,6 +1,6 @@
 package com.shinkson47.portfolio.labs.three.main;
 
-import com.shinkson47.portfolio.labs.three.lib.Name;
+import com.shinkson47.dmulib.*;
 
 public class NameDemo {
 
