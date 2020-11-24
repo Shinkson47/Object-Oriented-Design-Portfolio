@@ -1,7 +1,7 @@
 package com.shinkson47.portfolio.labs.four.test;
 
-import com.shinkson47.portfolio.labs.four.lib.BankAccount;
 import org.junit.Test;
+import com.shinkson47.dmulib.*;
 
 import static junit.framework.TestCase.assertEquals;
 

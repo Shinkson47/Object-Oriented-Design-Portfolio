@@ -1,9 +1,7 @@
 package com.shinkson47.portfolio.labs.three.test;
 
 import static org.junit.Assert.*;
-
-
-import com.shinkson47.portfolio.labs.three.lib.Name;
+import com.shinkson47.dmulib.*;
 import org.junit.Test;
 
 public class NameTest {

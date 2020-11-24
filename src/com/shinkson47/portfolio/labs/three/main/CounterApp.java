@@ -1,6 +1,6 @@
 package com.shinkson47.portfolio.labs.three.main; //this demonstration application resides in the main package
 
-import com.shinkson47.portfolio.labs.three.lib.Counter; //the counter class is imported from the lib package in this project
+import com.shinkson47.dmulib.*;
 
 public class CounterApp {
 	
