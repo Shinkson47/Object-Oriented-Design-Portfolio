@@ -1,8 +1,4 @@
-package com.shinkson47.portfolio.labs.six.composition.main;
-
-import com.shinkson47.portfolio.labs.six.startingplayer.Name;
-import com.shinkson47.portfolio.labs.six.startingplayer.PairOfDice;
-import com.shinkson47.portfolio.labs.six.startingplayer.Rollable;
+package com.shinkson47.portfolio.labs.six.startingplayer;
 
 /**
  * <h1>Portfolio A.1; A player composed of a name, and a hand of dice.</h1>
@@ -11,7 +7,7 @@ import com.shinkson47.portfolio.labs.six.startingplayer.Rollable;
  * @version 1
  * @since v1
  */
-public class Player implements Rollable {
+public class Player implements Rollable{
 
     //#region constants
     /**
