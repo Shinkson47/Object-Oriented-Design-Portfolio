@@ -1,9 +1,6 @@
-package com.shinkson47.portfolio.labs.six.Aggregation.main;
+package com.shinkson47.portfolio.labs.six.aggregation.main;
 
-import lib.employeeRegister.Date;
-import lib.employeeRegister.Employee;
-import lib.employeeRegister.EmployeeRegister;
-import lib.employeeRegister.Name;
+import com.shinkson47.portfolio.labs.six.aggregation.lib.employeeRegister.*;
 
 public class EmployeeRegisterDemo {
 

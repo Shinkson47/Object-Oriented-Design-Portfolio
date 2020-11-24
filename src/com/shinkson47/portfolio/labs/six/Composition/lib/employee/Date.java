@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.Composition.lib.employee;
+package com.shinkson47.portfolio.labs.six.composition.lib.employee;
 
 import java.text.DecimalFormat; //imports DecimalFormat class
 
