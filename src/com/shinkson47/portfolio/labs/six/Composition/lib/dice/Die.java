@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.Composition.lib.dice;
+package com.shinkson47.portfolio.labs.six.composition.lib.dice;
 
 import java.util.Random; //importing the Random class
 

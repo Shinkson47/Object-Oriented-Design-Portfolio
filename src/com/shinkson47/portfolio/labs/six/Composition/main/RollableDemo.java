@@ -1,8 +1,9 @@
-package com.shinkson47.portfolio.labs.six.Composition.main;
+package com.shinkson47.portfolio.labs.six.composition.main;
 
-import lib.dice.Die;
-import lib.dice.PairOfDice;
-import lib.dice.Rollable;
+
+import com.shinkson47.portfolio.labs.six.composition.lib.dice.Die;
+import com.shinkson47.portfolio.labs.six.composition.lib.dice.PairOfDice;
+import com.shinkson47.portfolio.labs.six.composition.lib.dice.Rollable;
 
 public class RollableDemo {
 
