@@ -1,8 +1,4 @@
-package com.shinkson47.portfolio.labs.six.composition.main;
-
-import com.shinkson47.portfolio.labs.six.startingplayer.Name;
-import com.shinkson47.portfolio.labs.six.startingplayer.PairOfDice;
-import com.shinkson47.portfolio.labs.six.startingplayer.Rollable;
+package com.shinkson47.portfolio.labs.seven.PortfolioPlayer.lib;
 
 /**
  * <h1>Portfolio A.1; A player composed of a name, and a hand of dice.</h1>
@@ -11,7 +7,7 @@ import com.shinkson47.portfolio.labs.six.startingplayer.Rollable;
  * @version 1
  * @since v1
  */
-public class Player implements Rollable {
+public class Player implements Rollable, Comparable<Player> {
 
     //#region constants
     /**
@@ -26,7 +22,7 @@ public class Player implements Rollable {
      * <h2>The hand of dice this player can use.</h2>
      * private; locally managed field.
      */
-    private PairOfDice hand;
+    private Rollable hand;
 
     /**
      * <h2>The name of the player</h2>
@@ -63,16 +59,16 @@ public class Player implements Rollable {
      * @param _name The {@link Name) object to be stored as this {@link Player }'s Name.
      */
     public Player(Name _name, String _gamerTag) {
-        this(_gamerTag, _name, new PairOfDice());
+        this(_name, _gamerTag, new PairOfDice());
     }
 
     /**
      * Creates a new Player with a specified {@link Player#name}, {@link Player#gamerTag} and  {@link Player#hand}
      * @param _gamerTag The string representing this {@link Player}'s gamerTag.
      * @param _name The {@link Name} object to be stored as this {@link Player}'s Name.
-     * @param _hand The {@link PairOfDice} object to be stored as this {@link Player }'s hand
+     * @param _hand The {@link Rollable) } object to be stored as this {@link Player }'s hand
      */
-    public Player(String _gamerTag, Name _name, PairOfDice _hand){
+    public Player(Name _name, String _gamerTag, Rollable _hand){
         setGamerTag(_gamerTag);
         setName(_name);
         setHand(_hand);
@@ -85,9 +81,9 @@ public class Player implements Rollable {
      * <h2>Replaces {@link Player#hand}</h2>
      * Overwrites the existing hand of dice with no notice. <br>
      * Previous hand will be left for garbage collection.
-     * @param hand The {@link PairOfDice} to store instead.
+     * @param hand The {@link Rollable) } to store instead.
      */
-    public void setHand(PairOfDice hand) {
+    public void setHand(Rollable hand) {
         this.hand = hand;
     }
 
@@ -102,14 +98,14 @@ public class Player implements Rollable {
     }
 
     /**
-     * <h2>Returns the {@link PairOfDice} that this player holds</h2>
+     * <h2>Returns the {@link Rollable) } that this player holds</h2>
      * @return {link Player#hand}
      */
-    public PairOfDice getHand() {
+    public Rollable getHand() {
         return hand;
     }
 
-    public PairOfDice getPairOfDice(){
+    public Rollable getRollable(){
         return getHand(); // I don't like this wrapper; it's dumb.
     }
 
@@ -140,6 +136,10 @@ public class Player implements Rollable {
         getHand().roll();
     }
 
+    public void rollDice(){
+        roll();                       // Again, dumb. Doesn't match the interface provided but is required for the test.
+    }
+
     /**
      * @return the score of the player's hand.
      */
@@ -155,6 +155,24 @@ public class Player implements Rollable {
      */
     public int getDiceScore(){
         return getScore();
+    }
+
+    public void setFullPlayerName(String name) {
+        String[] names = name.split(" ");
+        if (names.length != 2) return;                        // Not / too many  enough names. First / last only?
+        getName().setFirstName(names[0]);
+        getName().setFamilyName(names[1]);
+    }
+
+    public void generateGamerTag(int num) {
+        setGamerTag(getName().getFirstName() + getName().getFamilyName() + num);
+    }
+
+    @Override
+    public int compareTo(Player o) {
+        int result = getName().compareTo(o.getName());
+        result += getGamerTag().compareTo(getGamerTag());
+        return result;
     }
     //#endregion
 }

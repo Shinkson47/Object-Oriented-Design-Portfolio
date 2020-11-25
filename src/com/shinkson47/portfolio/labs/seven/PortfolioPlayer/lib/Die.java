@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.seven.Interfaces.lib.measurable;
+package com.shinkson47.portfolio.labs.seven.PortfolioPlayer.lib;
 
 import java.util.Random; //importing the Random class
 
@@ -11,7 +11,7 @@ import java.util.Random; //importing the Random class
  * 
  * @author la/lz
  */
-public class Die implements Rollable, Measurable {
+public class Die implements Rollable {
 
 	//Fields
 	private int sides; 
@@ -97,9 +97,5 @@ public class Die implements Rollable, Measurable {
 		return this.sides == other.sides && this.score == other.score;
 	}
 
-
-	@Override
-	public int getMeasure() {
-		return getScore();
-	}
+	
 }

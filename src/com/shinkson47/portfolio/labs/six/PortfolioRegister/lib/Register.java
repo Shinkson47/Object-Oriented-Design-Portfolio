@@ -1,12 +1,10 @@
 package com.shinkson47.portfolio.labs.six.PortfolioRegister.lib;
 
-import com.shinkson47.portfolio.labs.six.register.lib.Name;
-
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Register extends ArrayList<com.shinkson47.portfolio.labs.six.register.lib.Name> {
+public class Register extends ArrayList<Name> {
 
     /**
      * This should be public and static but the bs tests we're given won't allow me to do that.
@@ -17,7 +15,7 @@ public class Register extends ArrayList<com.shinkson47.portfolio.labs.six.regist
      */
     //private final int DEFAULT_CAPACITY = 20;
 
-    private ArrayList<com.shinkson47.portfolio.labs.six.register.lib.Name> fuckingStupidAndRedundantFieldThatIsRequiredForOneTestEvenThoughAnExtentionIsASignificantlyMoreEffectiveAndFollowsTheObjectOrientedApproachMuchBetterWhichShouldBeEncouragedAndNotForcefullyDisallowed;
+    private ArrayList<Name> fuckingStupidAndRedundantFieldThatIsRequiredForOneTestEvenThoughAnExtentionIsASignificantlyMoreEffectiveAndFollowsTheObjectOrientedApproachMuchBetterWhichShouldBeEncouragedAndNotForcefullyDisallowed;
     private int capacity;
 
     public Register(){
@@ -41,22 +39,22 @@ public class Register extends ArrayList<com.shinkson47.portfolio.labs.six.regist
         return capacity;
     }
 
-    public void addName(com.shinkson47.portfolio.labs.six.register.lib.Name name) {
+    public void addName(Name name) {
         if (size() >= capacity) return;
         add(name);
     }
 
-    public com.shinkson47.portfolio.labs.six.register.lib.Name getName(int i) {
+    public Name getName(int i) {
         return get(i);
     }
 
-    public void addNames(ArrayList<com.shinkson47.portfolio.labs.six.register.lib.Name> names) {
+    public void addNames(ArrayList<Name> names) {
         if (names.size() + size() > capacity) return;
         addAll(names);
     }
 
     public void sortRegister() {
-        sort(com.shinkson47.portfolio.labs.six.register.lib.Name::compareTo);
+        sort(Name::compareTo);
     }
 
     public int countFirstNameOccurrences(String name) {

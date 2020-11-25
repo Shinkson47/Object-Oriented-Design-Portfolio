@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.seven.PortfolioPlayer.src.lib;
+package com.shinkson47.portfolio.labs.seven.PortfolioPlayer.lib;
 
 /**
  * 

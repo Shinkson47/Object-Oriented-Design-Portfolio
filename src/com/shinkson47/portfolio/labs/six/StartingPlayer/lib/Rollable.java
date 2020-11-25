@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.composition.lib.dice;
+package com.shinkson47.portfolio.labs.six.startingplayer.lib;
 
 /** This interface imposes two common 'rollable' 
  * behaviours on the objects of each class that

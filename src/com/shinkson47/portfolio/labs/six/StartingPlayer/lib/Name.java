@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.seven.Interfaces.lib.measurable;
+package com.shinkson47.portfolio.labs.six.startingplayer.lib;
 
 /**
  * A name has a first name and a family name.
@@ -6,7 +6,7 @@ package com.shinkson47.portfolio.labs.seven.Interfaces.lib.measurable;
  * 
  * @author Luke
  */
-public class Name implements Measurable {
+public class Name implements Comparable<Name> {
 
 	//Fields
 	private String firstName;
@@ -63,13 +63,19 @@ public class Name implements Measurable {
 
 		Name other = (Name) obj; // downcast to a Name object
 
-		// compare first & family names using String' .equals() method
+		// compare first & family names using String's .equals() method
 		return this.familyName.equals(other.familyName)
 			&& this.firstName.equals(other.firstName);
 	}
-
+	
 	@Override
-	public int getMeasure() {
-		return -1;
+	public int compareTo(Name other) {
+		int result = this.familyName.compareTo(other.familyName);
+		
+		if (result == 0) {
+			result = this.firstName.compareTo(other.firstName);
+		}
+		
+		return result;
 	}
 }

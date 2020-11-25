@@ -8,6 +8,7 @@ import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import com.shinkson47.portfolio.labs.six.PortfolioRegister.lib.Name;
 import com.shinkson47.portfolio.labs.six.PortfolioRegister.lib.Register;
 import org.junit.Before;
 import org.junit.Test;

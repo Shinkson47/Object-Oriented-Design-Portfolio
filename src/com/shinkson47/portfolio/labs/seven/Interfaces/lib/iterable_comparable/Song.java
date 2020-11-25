@@ -1,12 +1,14 @@
 package com.shinkson47.portfolio.labs.seven.Interfaces.lib.iterable_comparable;
 
+import com.shinkson47.portfolio.labs.seven.Interfaces.lib.measurable.Measurable;
+
 /** Song details are the song title, the song's duration, and the artist.
  * There is no specific functionality apart from simulating playing the song,
  * so this class consists mostly of standard 'set' and 'get ' methods. 
  * 
  * @author la, lz
  */
-public class Song {
+public class Song implements Measurable {
 	
     //Fields
     private String title;
@@ -60,5 +62,10 @@ public class Song {
 
     public String toString() {
         return "Song:[title=" + title + ", duration=" + duration + ", artist=" + artist + "]";
+    }
+
+    @Override
+    public int getMeasure() {
+        return getDuration();
     }
 }

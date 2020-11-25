@@ -1,0 +1,13 @@
+
+*.class
+src/com/shinkson47/portfolio/labs/three/.DS_Store
+src/com/shinkson47/portfolio/labs/two/.DS_Store
+src/com/shinkson47/portfolio/labs/two/solutions/.DS_Store
+src/.DS_Store
+src/com/.DS_Store
+src/com/shinkson47/.DS_Store
+src/com/shinkson47/portfolio/.DS_Store
+src/com/shinkson47/portfolio/labs/.DS_Store
+src/com/shinkson47/portfolio/labs/four/.DS_Store
+src/com/shinkson47/portfolio/labs/one/.DS_Store
+.DS_Store
