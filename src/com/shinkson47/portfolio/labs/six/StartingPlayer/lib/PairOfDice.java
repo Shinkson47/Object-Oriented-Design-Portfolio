@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.StartingPlayer.src.lib;
+package com.shinkson47.portfolio.labs.six.startingplayer.lib;
 
 /**
  * 

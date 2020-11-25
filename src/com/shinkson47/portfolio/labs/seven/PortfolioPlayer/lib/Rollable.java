@@ -1,4 +1,4 @@
-package com.shinkson47.portfolio.labs.six.StartingPlayer.src.lib;
+package com.shinkson47.portfolio.labs.seven.PortfolioPlayer.lib;
 
 /** This interface imposes two common 'rollable' 
  * behaviours on the objects of each class that
