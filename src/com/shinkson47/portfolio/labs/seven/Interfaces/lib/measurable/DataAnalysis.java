@@ -17,7 +17,7 @@ public class DataAnalysis<E extends Measurable> {
 	}
 
 	public int sum() {
-		return objects.stream().mapToInt(m -> m.getMeasure()).sum();
+		return objects.stream().mapToInt(Measurable::getMeasure).sum();
 	}
 	
 	public String toString() {
