@@ -13,7 +13,7 @@ public class Player implements Rollable, Comparable<Player> {
     /**
      * <h2>The gamertag used when none is supplied.</h2>
      */
-    public static final String DEFAULT_GAMER_TAG = "NullTag";
+    // private /*static*/ final String DEFAULT_GAMER_TAG = ""; // nO MoRe thAn ThReE FiEldS, nO fIeLdS cAn bE StAtIc!
 
     //#endregion
 
@@ -30,7 +30,7 @@ public class Player implements Rollable, Comparable<Player> {
      * Whilst not final, the Name instance is not expected to be changed. If the name needs to be altered, it can be achieved
      * with {@link Name#setFirstName(String)} and {@link Name#setFamilyName(String)}.
      */
-    public Name name;
+    private Name name;
 
     /**
      * <h2>The player's gamertag.</h2>
@@ -50,7 +50,7 @@ public class Player implements Rollable, Comparable<Player> {
      * @see Player#DEFAULT_GAMER_TAG
      */
     public Player(){
-        this(new Name(), DEFAULT_GAMER_TAG);
+        this(new Name(), ""/*DEFAULT_GAMER_TAG*/);
     }
 
     /**
@@ -160,19 +160,41 @@ public class Player implements Rollable, Comparable<Player> {
     public void setFullPlayerName(String name) {
         String[] names = name.split(" ");
         if (names.length != 2) return;                        // Not / too many  enough names. First / last only?
-        getName().setFirstName(names[0]);
+        getName().setFirstName(Name.sanitize(names[0]));
         getName().setFamilyName(names[1]);
     }
 
     public void generateGamerTag(int num) {
-        setGamerTag(getName().getFirstName() + getName().getFamilyName() + num);
+        if (num <= 100 && num >= 1)
+        setGamerTag(
+                Reverse((getName().getFirstName() + getName().getFamilyName())).toLowerCase()
+                        + num
+        );
+    }
+
+    public static String Reverse(String s){
+        return new StringBuilder(s).reverse().toString();
     }
 
     @Override
     public int compareTo(Player o) {
         int result = getName().compareTo(o.getName());
-        result += getGamerTag().compareTo(getGamerTag());
+        result += getGamerTag().compareTo(o.getGamerTag());
         return result;
     }
+
     //#endregion
+
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String toString() {
+        return "Player:[" +
+                "name="+getName()+
+                "gt="+getGamerTag()+
+                "r="+getRollable()+
+                "]";
+    }
 }

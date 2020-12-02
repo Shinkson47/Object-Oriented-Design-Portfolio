@@ -49,7 +49,16 @@ public class Name implements Comparable<Name> {
 			return firstName + " " + familyName;
 		}
 	}
-	
+
+	public String asEmail(){
+		return asEmail("email.com");
+	}
+
+	public String asEmail(String Domain){
+		return getFirstName().toLowerCase().charAt(0) + "." + getFamilyName().toLowerCase().substring(0,3) + "@" + Domain;
+	}
+
+
 	@Override
 	public String toString() {
 		return "Name:[firstName=" + firstName + ", familyName=" + familyName + "]";
@@ -67,7 +76,7 @@ public class Name implements Comparable<Name> {
 		return this.familyName.equals(other.familyName)
 			&& this.firstName.equals(other.firstName);
 	}
-	
+
 	@Override
 	public int compareTo(Name other) {
 		int result = this.familyName.compareTo(other.familyName);

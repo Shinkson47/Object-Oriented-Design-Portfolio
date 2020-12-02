@@ -24,8 +24,19 @@ public class Name implements Comparable<Name> {
 		this.familyName = familyName;
 	}
 
-	
-	//Methods
+    public static String sanitize(String name) {
+		final String DEFAULT = "";
+
+		if (name == null || name.equals(""))
+			return DEFAULT;
+
+		if (name.matches("([A-Z]([a-z])*)"))
+			return name.substring(0,1).toUpperCase() + name.substring(1);
+		else return DEFAULT;
+    }
+
+
+    //Methods
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -49,7 +60,16 @@ public class Name implements Comparable<Name> {
 			return firstName + " " + familyName;
 		}
 	}
-	
+
+	public String asEmail(){
+		return asEmail("email.com");
+	}
+
+	public String asEmail(String Domain){
+		return firstName.toLowerCase().charAt(0) + "." + familyName.toLowerCase().substring(0, 3) + "@" + Domain;
+	}
+
+
 	@Override
 	public String toString() {
 		return "Name:[firstName=" + firstName + ", familyName=" + familyName + "]";

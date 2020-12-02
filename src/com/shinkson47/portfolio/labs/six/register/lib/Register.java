@@ -80,7 +80,6 @@ public class Register extends ArrayList<Name> {
         return remove(i);
     }
 
-
     /**
      * @return
      */
