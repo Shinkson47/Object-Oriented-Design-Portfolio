@@ -1,4 +1,8 @@
 package com.shinkson47.portfolio.labs.six.Aggregation.main;
+
+import com.shinkson47.portfolio.labs.seven.Interfaces.lib.iterable_comparable.PlayList;
+import com.shinkson47.portfolio.labs.seven.Interfaces.lib.iterable_comparable.Song;
+
 /* Program to informally test, create and populate a PlayList object. */
 public class PlayListApp {
 
